@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">O Mineiro</string>
+    <string name="restaurant_name">Restaurante \"O Mineiro\"</string>
+    <string name="about">Há mais de 10 anos atuando com muita dedicação, o Restaurante \"O Mineiro\", junto com todos os seus colaboradores, serve um variado cardápio incluindo saladas, massas, carnes e bebidas no sistema de self-service. Conta também com uma irresistível mesa de doces. Venha e traga a sua família para um almoço aconchegante.</string>
+    <string name="address_title">Endereço</string>
+    <string name="address">Rua Prof. João Cândido, 1503\nLondrina/PR</string>
+    <string name="phone_title">Telefone</string>
+    <string name="phone">(43) 3322&#8211;5632</string>
+    <string name="hours_operation_title">Horário de funcionamento</string>
+    <string name="hours_operation">De segunda a sábado\nDas 11:00 às 14:30</string>
+</resources>
