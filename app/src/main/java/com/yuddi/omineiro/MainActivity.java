@@ -1,10 +1,13 @@
 package com.yuddi.omineiro;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
@@ -33,10 +36,39 @@ public class MainActivity extends AppCompatActivity {
                 small2.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.photo3, finalWidth / 3));
                 small3.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.photo4, finalWidth / 3));
                 top.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.rest_o_mineiro, finalWidth / 3 * 4));
-                
+
                 return true;
             }
         });
+
+        View address = findViewById(R.id.address_linearlayout);
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+
+                String address = getString(R.string.address);
+
+                Uri baseUri = Uri.parse("geo:0,0");
+                Uri.Builder uriBuilder = baseUri.buildUpon();
+                uriBuilder.appendQueryParameter("q", address);
+
+                intent.setData(uriBuilder.build());
+                startActivity(intent);
+            }
+        });
+
+        View phone = findViewById(R.id.phone_linearlayout);
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                String phone = getString(R.string.phone);
+                intent.setData(Uri.fromParts("tel", phone, null));
+                startActivity(intent);
+            }
+        });
+
     }
 
     private Bitmap decodeSampledBitmapFromResource(Resources res, int resId, int reqWidth) {

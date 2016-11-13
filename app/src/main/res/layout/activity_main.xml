@@ -94,11 +94,32 @@
             android:text="@string/address_title"
             style="@style/Subhead"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/address_linearlayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/address"
-            style="@style/Body"/>
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_location"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/address"
+                android:autoLink="map"
+                style="@style/Body"/>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,12 +127,32 @@
             android:text="@string/phone_title"
             style="@style/Subhead"/>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/phone_linearlayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/phone"
-            android:autoLink="phone"
-            style="@style/Body"/>
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:layout_gravity="center_vertical"
+                android:autoLink="phone"
+                style="@style/Body"/>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
